@@ -39,7 +39,7 @@
 	   	}
 
 	   	public function viewArticle(){
-	   		return $this->db->select('type_id, type_name, type_des, type_date')->from('types')->order_by('type_id ASC')->get()->result_array();
+	   		return $this->db->select('type_id, type_name, type_des, public,type_date')->from('types')->order_by('type_id ASC')->get()->result_array();
 	   	}
 
 	   	public function delArticle($id = 0){
@@ -72,11 +72,6 @@
 	   			return array(
 	   				'type'=>'successfull',
 	   				'message'=>'Da xoa '.count($id).'du lieu thanh cong'
-	   				);
-	   		}else{
-	   			return array(
-	   				'type'=>'error',
-	   				'message'=>'Ban phai chon du lieu truoc khi xoa'
 	   				);
 	   		}
 	   	}

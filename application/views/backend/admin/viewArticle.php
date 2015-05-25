@@ -21,7 +21,7 @@
                                         <b>'.$message_flash['message'].'
                                     </div>';
 
-                                if (isset($message_flash) && count($message_flash) > 0 ) {
+                                if (isset($message_flash) ) {
                                     if ($message_flash['type'] == 'successfull') {      
                                         echo $str_message_success;
                                     }else{
